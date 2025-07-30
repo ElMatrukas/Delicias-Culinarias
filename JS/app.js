@@ -38,3 +38,26 @@ menuLinks.forEach((menuLink) => {
     observer.observe(target);
   }
 });
+
+// Search-bar
+
+ document.addEventListener('DOMContentLoaded', function() {
+            const searchIcon = document.querySelector('.search-icon');
+            const searchInput = document.querySelector('.search-input');
+            
+            // Permitir clic en el ícono para activar la búsqueda
+            searchIcon.addEventListener('click', function() {
+                if (searchInput.value.trim() !== '') {
+                    // Aquí puedes agregar la lógica de búsqueda
+                    alert('Buscando: ' + searchInput.value);
+                }
+            });
+            
+            // Permitir búsqueda con Enter
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+                    // Aquí puedes agregar la lógica de búsqueda
+                    alert('Buscando: ' + searchInput.value);
+                }
+            });
+        });
