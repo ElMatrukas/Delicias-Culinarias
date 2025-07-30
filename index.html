@@ -5,17 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicias Culinarias</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/herosection.css">
     <script src="/JS/app.js"></script>
 </head>
 <body>
-    <header>
-        <nav></nav>
+    <header class="topheader">
+        <nav class="topnav">
+            <a href="#" class="logo">
+                <div class="logotype">
+                    Delicias Culinarias
+                </div>
+            </a>
+            <button class="open-menu" aria-label="Abrir menú">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="currentColor"
+                class="list_icon"
+                viewBox="0 0 16 16"
+                >
+                <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+                </svg>
+            </button>
+            
+            <ul class="menu">
+            <button class="close-menu" aria-label="Cerrar menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </button>
+            <li><a href="#Herosetion">Inicio</a></li>
+            <li><a href="#Sobre_mi" class="selected">recetas</a></li>
+            <li><a href="#Skills">Categorías</a></li>
+            <li><a href="#Proyectos">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
         <main>
-            <section>
-                <article></article>
+            <div class="img-fondo-wrapper">
+                <img src="/img/hero-img.png" alt="">
+            </div>
+            <section class="herosection">
+                <div class="container-hero">
+                    <h1 class="principal-h1">Descubre el arte de cocinar</h1>
+                    <p class="principal-p">Más de 1000 recetas para todos los gustos y ocasiones</p>
+                    <div class="icon-bar">
+                        <input type="search" name="" id="" class="search-bar" placeholder="Buscar recetas...">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="47" height="47" rx="23.5" fill="#FF6666"/>
+                        <path d="M34.9778 37L25.8778 27.9C25.1556 28.4778 24.325 28.9352 23.3861 29.2722C22.4472 29.6093 21.4481 29.7778 20.3889 29.7778C17.7648 29.7778 15.5442 28.8687 13.7271 27.0507C11.91 25.2326 11.001 23.012 11 20.3889C10.999 17.7658 11.9081 15.5452 13.7271 13.7271C15.5461 11.909 17.7667 11 20.3889 11C23.011 11 25.2321 11.909 27.0521 13.7271C28.8721 15.5452 29.7807 17.7658 29.7778 20.3889C29.7778 21.4481 29.6093 22.4472 29.2722 23.3861C28.9352 24.325 28.4778 25.1556 27.9 25.8778L37 34.9778L34.9778 37ZM20.3889 26.8889C22.1944 26.8889 23.7294 26.2572 24.9938 24.9938C26.2581 23.7304 26.8899 22.1954 26.8889 20.3889C26.8879 18.5824 26.2562 17.0479 24.9938 15.7854C23.7313 14.523 22.1964 13.8908 20.3889 13.8889C18.5814 13.887 17.0469 14.5191 15.7854 15.7854C14.524 17.0517 13.8918 18.5862 13.8889 20.3889C13.886 22.1916 14.5182 23.7265 15.7854 24.9938C17.0527 26.261 18.5872 26.8927 20.3889 26.8889Z" fill="white"/>
+                        </svg>
+                    </div>     
+                </div>
             </section>
-            <section></section>
+            <section class="Popular"></section>
         </main>
     <footer></footer>
 </body>

@@ -1,0 +1,145 @@
+.topheader {
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
+  position: sticky;
+  background-color: var(--bg-clr-I);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  height: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-clr-1);
+}
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 0 15px;
+}
+.menu a {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  transition: font-size 500ms;
+  
+  position: relative;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+
+  opacity: 0;
+  transition: opacity 500ms;
+  background: var(--text-clr-3);
+}
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8;
+}
+.menu a.selected::after {
+  color: var(--text-clr-2);
+}
+.menu a.selected {
+  color: var(--text-clr-2);
+}
+.menu a:hover {
+  color: var(--text-clr-2);
+}
+.menu a.selected,
+.menu a:hover {
+  opacity: 0.8;
+  font-size: 1.3rem;
+  transition: font-size 500ms;
+}
+.open-menu,
+.close-menu {
+  display: none;
+}
+.logotype {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  /* Menu */
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms;
+  }
+  .menu a.selected,
+  .menu a:hover {
+    opacity: 0.8;
+    font-size: 2.5rem;
+    transition: font-size 500ms;
+}
+  .menu a {
+    color: white;
+    line-height: 60px;
+    font-size: 30px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+  }
+  .close-menu {
+    align-self: flex-end;
+    padding: 13px 13px;
+    margin-bottom: 200px;
+
+
+  }
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+    backdrop-filter: blur(12px) opacity(2);
+  }
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+   .menu a::after {
+    content: none;
+  }
+  .menu a:hover,
+  .menu a.selected {
+    color: var(--secundary-color);
+  }
+}
