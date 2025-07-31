@@ -1,7 +1,8 @@
 .topheader {
   box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
   position: sticky;
-  background-color: var(--bg-clr-I);
+  background-color: var(--acent-clr-o);
+  backdrop-filter: blur(12px);
   left: 0;
   top: 0;
   width: 100%;
@@ -21,13 +22,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--text-clr-1);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-600);
+  color: var(--acent-clr);
 }
 /* Menu */
 .menu {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -37,8 +39,7 @@
 }
 .menu a {
   color: rgb(0, 0, 0);
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: var(--fw-300);
   line-height: 50px;
   text-transform: uppercase;
   transition: font-size 500ms;
@@ -55,7 +56,7 @@
 
   opacity: 0;
   transition: opacity 500ms;
-  background: var(--text-clr-3);
+  background: var(--text-clr-4);
 }
 .menu a.selected::after,
 .menu a:hover::after {
@@ -64,16 +65,11 @@
 .menu a.selected::after {
   color: var(--text-clr-2);
 }
-.menu a.selected {
-  color: var(--text-clr-2);
-}
-.menu a:hover {
-  color: var(--text-clr-2);
-}
 .menu a.selected,
 .menu a:hover {
   opacity: 0.8;
-  font-size: 1.3rem;
+  color: var(--text-clr-4);
+  font-size: calc(var(--fs-a) * 1.01 );
   transition: font-size 500ms;
 }
 .open-menu,
@@ -84,7 +80,7 @@
   display: flex;
   justify-content: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   /* Menu */
   .menu {
     flex-direction: column;
@@ -103,13 +99,13 @@
   .menu a.selected,
   .menu a:hover {
     opacity: 0.8;
-    font-size: 2.5rem;
+    font-size: calc(var(--fs-a) * 1.2 );
     transition: font-size 500ms;
-}
+  }
   .menu a {
-    color: white;
+    color: var(--text-clr-4);
     line-height: 60px;
-    font-size: 30px;
+    font-size: var(--fs-a);
   }
   .open-menu,
   .close-menu {
@@ -117,14 +113,12 @@
     border: none;
     background: none;
     cursor: pointer;
-    color: white;
+    color: var(--text-clr-4);
   }
   .close-menu {
     align-self: flex-end;
-    padding: 13px 13px;
+    padding: 32px 18px;
     margin-bottom: 200px;
-
-
   }
   .menu_opened {
     opacity: 1;
@@ -136,10 +130,10 @@
     outline: none;
   }
    .menu a::after {
-    content: none;
+    content:'';
   }
   .menu a:hover,
   .menu a.selected {
-    color: var(--secundary-color);
+    color: var(--text-clr-4);
   }
 }

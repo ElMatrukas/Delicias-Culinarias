@@ -2,6 +2,7 @@
     --text-clr-1:hsl(0, 0%, 100%);
     --text-clr-2:hsl(0, 0%, 62%);
     --text-clr-3:hsl(0, 5%, 38%);
+    --text-clr-4: hsl(0, 0%, 0%);
     --acent-clr:hsl(0, 100%, 70%);
     --acent-clr-o:hsla(0, 100%, 70%, 0.502);
     --bg-clr:hsl(0, 0%, 100%);
@@ -10,6 +11,16 @@
     --fs-h2: 3rem;
     --fs-h3: 2rem;
     --fs-p: 1.25rem;
+    --fs-a: 1.5rem;
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-700: 800;
+    --fw-700: 900;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
@@ -20,11 +31,12 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--bg-clr);
+    background-color:   var(--bg-clr);
     font-family: "Kanit", sans-serif;
     
 }
 a{
+    font-size: var(--fs-a);
     text-decoration: none;
     font-family: "Kantumruy Pro", sans-serif;
 }
