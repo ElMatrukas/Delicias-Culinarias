@@ -1,8 +1,7 @@
 .topheader {
-  box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
+  box-shadow: rgb(0, 0, 0, .7) 0px 0px 10px;
   position: sticky;
-  background-color: var(--acent-clr-o);
-  backdrop-filter: blur(12px);
+  background: hsl(from var(--acent-clr)h s calc(l + 10));
   left: 0;
   top: 0;
   width: 100%;
@@ -89,7 +88,7 @@
     top: 0;
     width: 100%;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     overflow-y: auto;
 
     opacity: 0;
@@ -130,7 +129,7 @@
     outline: none;
   }
    .menu a::after {
-    content:'';
+    content:none;
   }
   .menu a:hover,
   .menu a.selected {

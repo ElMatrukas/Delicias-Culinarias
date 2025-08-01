@@ -42,7 +42,6 @@
 }
         
 .search-container {
-    width: 50%;
     max-width: 600px;
     display: flex;
     align-items: center;
@@ -78,10 +77,14 @@
 }
 @media (max-width: 550px) {
     .principal-h1{
-       font-size: var(--fs-h2); 
+       font-size: var(--fs-900); 
+       padding-inline: 5px;
     }
     .principal-p{
-        font-size: var(--fs-200);
+        font-size: var(--fs-100);
+        text-align: center;
+        min-width: 300px;
+        padding-inline: 5px;
 
     }
 }
