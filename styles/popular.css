@@ -4,6 +4,17 @@
     margin-inline: 5vw;
     gap: 1vh;
 }
+.Popular::before{
+    content: url(/img/shape-bg.svg);
+    position: absolute;
+    z-index: -10;
+    right: 0;
+    bottom: -35%;
+    width: 400px;
+    overflow-x: hidden;
+    filter: blur(100px);
+    
+}
 .Popular img {
     width: 100%;
     object-fit: cover;
@@ -34,10 +45,11 @@
 }
 .cards-p {
     display: flex;
+    justify-content: space-around;
     gap: 20px;
 
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory; 
 }
 .t-p {
     display: flex;
@@ -45,51 +57,60 @@
     justify-content: space-between;
     align-items: baseline;
 }
-.card-1, .card-2, .card-3 {
+.card-p-1, .card-p-2, .card-p-3 {
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 300px;
     aspect-ratio: 3 / 4;
 
     max-height: 100%;
-    max-width: 90%;
+    max-width: 100%;
 
     background: var(--bg-clr);
     box-shadow: 0 2px 5px rgba(0,0,0,.5);
     border-radius: 25px;
 }
-.card-1 h3, .card-2 h3, .card-3 h3{
+.card-p-1 h3, .card-p-2 h3, .card-p-3 h3{
     justify-self: flex-start;
     padding-inline: 10px;
 }
-.card-1 p, .card-2 p, .card-3 p{
+.card-p-1 p, .card-p-2 p, .card-p-3 p{
     padding-inline: 10px;
 }
 @media (min-width: 768px) {
-    .cards-p{
-        width: 100%;
-
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        
-    }
-    .card-1, .card-2, .card-3 {
-        scroll-snap-align: start;
-        flex-shrink: 0;
-        width: 300px;
-        aspect-ratio: 3 / 3;
-
-        max-height: 600px;
-        max-width: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .Popular::before{
+        content: url(/img/shape-bg-big.svg);
+        bottom: -100%;
+        width: 900px;
     }
     .tilte-popular h2{
         font-size: var(--fs-900);
     }
     .tilte-popular h3{
         font-size: var(--fs-500);
+    }   
+}
+  @media (min-width: 1024px) {
+    .cards-p{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: stretch;
+        justify-items: center;
+        align-items: stretch;
+        padding-block-end: 1vh;
     }
-
+    .card-p-1, .card-p-2, .card-p-3 {
+        width: max-content;
+        aspect-ratio: 3 / 3;
+        max-height: 800px;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+}
+@media (min-width: 1380px) {
+    .cards-p::-webkit-scrollbar{
+        display: none;
+    }
 }

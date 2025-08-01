@@ -1,6 +1,6 @@
 .topheader {
   box-shadow: rgb(0, 0, 0, .7) 0px 0px 10px;
-  position: sticky;
+  position: fixed;
   background: hsl(from var(--acent-clr)h s calc(l + 10));
   left: 0;
   top: 0;
