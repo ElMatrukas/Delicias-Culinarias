@@ -1,25 +1,16 @@
-.Popular {
+.New {
     display: grid;
     grid-template-columns: auto;
     margin-inline: 5vw;
     gap: 1vh;
 }
-.Popular::before{
-    content: url(/img/shape-bg.svg);
-    position: absolute;
-    z-index: -10;
-    right: 0;
-    bottom: -24%;
-    width: 400px;
-    overflow-x: hidden;
-    filter: blur(20px);
-}
-.Popular img {
+.New img {
     width: 100%;
+    height: 200px;
     object-fit: cover;
     border-radius:  25px 25px 0 0;
 }
-.tilte-popular {
+.tilte-new {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,16 +18,15 @@
     height: 80px;
     background: var(--acent-clr-o);
     backdrop-filter: blur(8px);
-    margin-top: 1vh;
     border-radius: 50px;
     padding-inline: 10px;
 }
-.tilte-popular h2{
+.tilte-new h2{
     font-size: var(--fs-700);
     font-weight: var(--fw-500);
     letter-spacing: -2px;
 }
-.tilte-popular h3{
+.tilte-new h3{
     color: var(--text-clr-3);
     font-size: var(--fs-400);
     font-weight: var(--fw-400);
@@ -48,7 +38,7 @@
     display: flex;
     align-items: center;
 }
-.cards-p {
+.cards-n {
     display: flex;
     justify-content: space-around;
     padding-block-end: 1vh;
@@ -91,28 +81,26 @@
 .cards-c::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
-.card-p-1, .card-p-2, .card-p-3 {
+.card-n-1, .card-n-2, .card-n-3, .card-n-4{
+    width: 300px;
+    height:300px;
+    max-height: 100%;
+    max-width: 90%;
+    aspect-ratio: 3 / 2;
+
+
     scroll-snap-align: start;
     flex-shrink: 0;
-    width: 300px;
-    aspect-ratio: 3 / 4;
-    
-    max-height: 100%;
-    max-width: 100%;
     
     background: var(--bg-clr);
     box-shadow: 0 2px 5px rgba(0,0,0,.5);
     border-radius: 25px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-.card-p-1 h3, .card-p-2 h3, .card-p-3 h3{
-    justify-self: flex-start;
-    padding-inline: 10px;
+.card-n-1 h3, .card-n-2 h3, .card-n-3 h3, .card-n-4 h3{
+    text-align: center;
+    margin-block: 1px;
 }
-.card-p-1 p, .card-p-2 p, .card-p-3 p{
+.card-n-1 p, .card-n-2 p, .card-n-3 p, .card-n-4 p{
     padding-inline: 10px;
 }
 .t-p {
@@ -121,40 +109,37 @@
     justify-content: space-between;
     align-items: baseline;
 }
-@media (min-width: 900px) {
-    .Popular::before{
-        content: url(/img/shape-bg-big.svg);
-        bottom: -100%;
-        width: 700px;
-    }
-    .tilte-popular h2{
-        font-size: var(--fs-900);
-    }
-    .tilte-popular h3{
-        font-size: var(--fs-500);
-    }   
-}
-  @media (min-width: 1024px) {
-    .cards-p{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: stretch;
-        justify-items: center;
-        align-items: stretch;
+@media (min-width: 768px) {
+    .cards-n{
+        width: 100%;
+
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
         padding-block-end: 1vh;
+        
     }
-    .card-p-1, .card-p-2, .card-p-3 {
-        width: max-content;
+    .card-n-1, .card-n-2, .card-n-3, .card-n-4 {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 300px;
         aspect-ratio: 3 / 3;
-        max-height: 800px;
+
+        max-height: 600px;
         max-width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    } 
+    }
+    .tilte-new h2{
+        font-size: var(--fs-900);
+    }
+    .tilte-new h3{
+        font-size: var(--fs-500);
+    }
+
 }
-@media (min-width: 1380px) {
-    .cards-p::-webkit-scrollbar{
-        display: none;
+@media (min-width: 1024px) {
+    .cards-n{
+                padding-block-end: 1vh;
     }
 }

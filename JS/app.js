@@ -41,23 +41,96 @@ menuLinks.forEach((menuLink) => {
 
 // Search-bar
 
- document.addEventListener('DOMContentLoaded', function() {
-            const searchIcon = document.querySelector('.search-icon');
-            const searchInput = document.querySelector('.search-input');
-            
-            // Permitir clic en el ícono para activar la búsqueda
-            searchIcon.addEventListener('click', function() {
-                if (searchInput.value.trim() !== '') {
-                    // Aquí puedes agregar la lógica de búsqueda
-                    alert('Buscando: ' + searchInput.value);
-                }
-            });
-            
-            // Permitir búsqueda con Enter
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' && searchInput.value.trim() !== '') {
-                    // Aquí puedes agregar la lógica de búsqueda
-                    alert('Buscando: ' + searchInput.value);
-                }
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search-icon');
+    const searchInput = document.querySelector('.search-input');
+    
+    // Permitir clic en el ícono para activar la búsqueda
+    searchIcon.addEventListener('click', function() {
+        if (searchInput.value.trim() !== '') {
+            // Aquí puedes agregar la lógica de búsqueda
+            alert('Buscando: ' + searchInput.value);
+        }
+    });
+    
+    // Permitir búsqueda con Enter
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+            // Aquí puedes agregar la lógica de búsqueda
+            alert('Buscando: ' + searchInput.value);
+        }
+    });
+    })
+
+// Scroll functionality for all sections
+// Popular section
+const popularSection = document.querySelector('.Popular');
+if (popularSection) {
+    const popularLeftBtn = popularSection.querySelector('.scroll-btn-left');
+    const popularRightBtn = popularSection.querySelector('.scroll-btn-right');
+    const popularContainer = popularSection.querySelector('.cards-p');
+    
+    if (popularLeftBtn && popularRightBtn && popularContainer) {
+        popularLeftBtn.addEventListener('click', () => {
+            popularContainer.scrollBy({
+                left: -320,
+                behavior: 'smooth'
             });
         });
+        
+        popularRightBtn.addEventListener('click', () => {
+            popularContainer.scrollBy({
+                left: 320,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// New section
+const newSection = document.querySelector('.New');
+if (newSection) {
+    const newLeftBtn = newSection.querySelector('.scroll-btn-left');
+    const newRightBtn = newSection.querySelector('.scroll-btn-right');
+    const newContainer = newSection.querySelector('.cards-n');
+    
+    if (newLeftBtn && newRightBtn && newContainer) {
+        newLeftBtn.addEventListener('click', () => {
+            newContainer.scrollBy({
+                left: -320,
+                behavior: 'smooth'
+            });
+        });
+        
+        newRightBtn.addEventListener('click', () => {
+            newContainer.scrollBy({
+                left: 320,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Category section
+const categorySection = document.querySelector('.Category');
+if (categorySection) {
+    const categoryLeftBtn = categorySection.querySelector('.scroll-btn-left');
+    const categoryRightBtn = categorySection.querySelector('.scroll-btn-right');
+    const categoryContainer = categorySection.querySelector('.cards-c');
+    
+    if (categoryLeftBtn && categoryRightBtn && categoryContainer) {
+        categoryLeftBtn.addEventListener('click', () => {
+            categoryContainer.scrollBy({
+                left: -320,
+                behavior: 'smooth'
+            });
+        });
+        
+        categoryRightBtn.addEventListener('click', () => {
+            categoryContainer.scrollBy({
+                left: 320,
+                behavior: 'smooth'
+            });
+        });
+    } 
+}

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/herosection.css">
+    <link rel="stylesheet" href="/styles/popular.css">
+    <link rel="stylesheet" href="/styles/nuevo.css">
+    <link rel="stylesheet" href="/styles/Category.css">
     <script defer src="/JS/app.js"></script>
 </head>
 <body>
@@ -39,10 +42,10 @@
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
                 </svg>
             </button>
-            <li><a href="#Herosetion">Inicio</a></li>
-            <li><a href="#Sobre_mi" class="selected">recetas</a></li>
-            <li><a href="#Skills">Categorías</a></li>
-            <li><a href="#Proyectos">Contacto</a></li>
+            <li><a href="#herosection">Inicio</a></li>
+            <li><a href="#Popular" class="selected">Popular</a></li>
+            <li><a href="#Categorias">Categorías</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -50,7 +53,7 @@
             <div class="img-fondo-wrapper">
                 <img src="/img/hero-img.png" alt="">
             </div>
-            <section class="herosection">
+            <section class="herosection" id="herosection">
                 <div class="container-hero">
                     <h1 class="principal-h1">Descubre el arte de cocinar</h1>
                     <p class="principal-p">Más de 1000 recetas para todos los gustos y ocasiones</p>
@@ -66,36 +69,195 @@
                             </svg>
                     </div>        
             </section>
-            <section class="Popular">
+            <section class="Popular" id="Popular">
                 <div class="tilte-popular">
                     <h2>Popular</h2>
                     <h3>Ver todas</h3>
                 </div>
-                <div class="tarjetas-p">
-                    <div class="trajeta-1">
-                        <h3>Pasta Carbonara</h3>
-                        <p>Una versión auténtica de la famosa pasta romana con huevo, panceta y queso pecorino.</p>
-                        <div class="t-p">
-                            <p>30 min</p>
-                            <p>4 Porciones</p>
+                <div class="section-container">
+                    <button class="scroll-btn scroll-btn-left" aria-label="Scroll left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="cards-p">
+                        <div class="card-p-1">
+                            <img src="/img/Pasta-Carbonara.png" alt="">
+                            <h3>Pasta Carbonara Clasica</h3>
+                            <p>Una versión auténtica de la famosa pasta romana con huevo, panceta y queso pecorino.</p>
+                            <div class="t-p">
+                                <p>30 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-p-2">
+                            <img src="/img/Ensalada-Cesar-Pollo.png" alt="">
+                            <h3>Ensalada César con Pollo</h3>
+                            <p>Crujiente lechuga romana con aderezo cremoso, crutones y pechuga de pollo.</p>
+                            <div class="t-p">
+                                <p>25 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-p-3">
+                            <img src="/img/Brownies.png" alt="">
+                            <h3>Brownies de Chocolate</h3>
+                            <p>Brownies caseros con centro tierno y exterior crujiente, perfectos para compartir.</p>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="trajeta-2">
-                        <h3>Ensalada César con Pollo</h3>
-                        <p>Crujiente lechuga romana con aderezo cremoso, crutones y pechuga de pollo.</p>
-                        <div class="t-p">
-                            <p>25 min</p>
-                            <p>2 Porciones</p>
+                    <button class="scroll-btn scroll-btn-right" aria-label="Scroll right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <section class="New" id="New">
+                <div class="tilte-new">
+                    <h2>Nuevo</h2>
+                    <h3>Ver todas</h3>
+                </div>
+                <div class="section-container">
+                    <button class="scroll-btn scroll-btn-left" aria-label="Scroll left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="cards-n">
+                        <div class="card-n-1">
+                            <img src="/img/Curry.png" alt="">
+                            <h3>Curry Tailandés</h3>
+                            <div class="t-p">
+                                <p>30 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-n-2">
+                            <img src="/img/Panqueques.png" alt="">
+                            <h3>Panqueques Especiales</h3>
+                            <div class="t-p">
+                                <p>25 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-n-3">
+                            <img src="/img/Tacos-Pastor.png" alt="">
+                            <h3>Tacos al Pastor</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-n-4">
+                            <img src="/img/Sopa-Clabaza.png" alt="">
+                            <h3>Sopa de Calabaza</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="trajeta-3">
-                        <h3>Brownies de Chocolate</h3>
-                        <p>Brownies caseros con centro tierno y exterior crujiente, perfectos para compartir.</p>
-                        <div class="t-p">
-                            <p>45 min</p>
-                            <p>9 Porciones</p>
+                    <button class="scroll-btn scroll-btn-right" aria-label="Scroll right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <section class="Category">
+                <h2 class="tilte-category">Explora Por Categorías</h2>
+                <ul class="category-list">
+                    <li class="selected">Todas</li>
+                    <li class="">Rapido</li>
+                    <li class="">Desayunos</li>
+                    <li class="">Almuerzos</li>
+                    <li class="">Ensaladas</li>
+                    <li class="">Pastas</li>
+                    <li class="">Carnes</li>
+                    <li class="">Postres</li>
+                    <li class="">Vegetariano</li>
+                </ul>
+                <div class="section-container" id="Categorias">
+                    <button class="scroll-btn scroll-btn-left" aria-label="Scroll left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="cards-c">
+                        <div class="card-c-1">
+                            <img src="/img/Curry.png" alt="">
+                            <h3>Curry Tailandés</h3>
+                            <div class="t-p">
+                                <p>30 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-2">
+                            <img src="/img/Panqueques.png" alt="">
+                            <h3>Panqueques Especiales</h3>
+                            <div class="t-p">
+                                <p>25 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-3">
+                            <img src="/img/Tacos-Pastor.png" alt="">
+                            <h3>Tacos al Pastor</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4">
+                            <img src="/img/Sopa-Clabaza.png" alt="">
+                            <h3>Sopa de Calabaza</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-1">
+                            <img src="/img/Curry.png" alt="">
+                            <h3>Curry Tailandés</h3>
+                            <div class="t-p">
+                                <p>30 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-2">
+                            <img src="/img/Panqueques.png" alt="">
+                            <h3>Panqueques Especiales</h3>
+                            <div class="t-p">
+                                <p>25 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-3">
+                            <img src="/img/Tacos-Pastor.png" alt="">
+                            <h3>Tacos al Pastor</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4">
+                            <img src="/img/Sopa-Clabaza.png" alt="">
+                            <h3>Sopa de Calabaza</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
                         </div>
                     </div>
+                    <button class="scroll-btn scroll-btn-right" aria-label="Scroll right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
             </section>
         </main>
