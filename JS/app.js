@@ -134,3 +134,66 @@ if (categorySection) {
         });
     } 
 }
+
+// Draggable category list functionality
+const categoryList = document.querySelector('.category-list');
+if (categoryList) {
+    // Category filtering functionality
+    const categoryButtons = categoryList.querySelectorAll('button');
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove 'selected-c' class from all buttons
+            categoryButtons.forEach(btn => {
+                btn.classList.remove('selected-c');
+            });
+            
+            // Add 'selected-c' class to the clicked button
+            this.classList.add('selected-c');
+        });
+    });
+    
+    // Draggable functionality
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const startDrag = (e) => {
+        // Prevent dragging when clicking on buttons
+        if (e.target.tagName === 'BUTTON') return;
+        
+        isDown = true;
+        categoryList.classList.add('dragging');
+        startX = (e.pageX || e.touches[0].pageX) - categoryList.offsetLeft;
+        scrollLeft = categoryList.scrollLeft;
+    };
+
+    const stopDrag = () => {
+        isDown = false;
+        categoryList.classList.remove('dragging');
+    };
+
+    const drag = (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = (e.pageX || e.touches[0].pageX) - categoryList.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        categoryList.scrollLeft = scrollLeft - walk;
+    };
+
+    categoryList.addEventListener('mousedown', startDrag);
+    categoryList.addEventListener('touchstart', (e) => {
+        // Prevent dragging when touching on buttons
+        if (e.target.tagName === 'BUTTON') return;
+        startDrag(e.touches[0]);
+    });
+
+    categoryList.addEventListener('mouseleave', stopDrag);
+    categoryList.addEventListener('mouseup', stopDrag);
+    categoryList.addEventListener('touchend', stopDrag);
+
+    categoryList.addEventListener('mousemove', drag);
+    categoryList.addEventListener('touchmove', (e) => {
+        drag(e.touches[0]);
+    });
+}
