@@ -41,23 +41,41 @@ menuLinks.forEach((menuLink) => {
 
 // Search-bar
 
- document.addEventListener('DOMContentLoaded', function() {
-            const searchIcon = document.querySelector('.search-icon');
-            const searchInput = document.querySelector('.search-input');
-            
-            // Permitir clic en el ícono para activar la búsqueda
-            searchIcon.addEventListener('click', function() {
-                if (searchInput.value.trim() !== '') {
-                    // Aquí puedes agregar la lógica de búsqueda
-                    alert('Buscando: ' + searchInput.value);
-                }
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search-icon');
+    const searchInput = document.querySelector('.search-input');
+    
+    // Permitir clic en el ícono para activar la búsqueda
+    searchIcon.addEventListener('click', function() {
+        if (searchInput.value.trim() !== '') {
+            // Aquí puedes agregar la lógica de búsqueda
+            alert('Buscando: ' + searchInput.value);
+        }
+    });
+    
+    // Permitir búsqueda con Enter
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+            // Aquí puedes agregar la lógica de búsqueda
+            alert('Buscando: ' + searchInput.value);
+        }
+    });
+  })
+
+document.addEventListener('DOMContentLoaded', function() {
+            const scrollLeftBtn = document.querySelector('.scroll-btn-left');
+            const scrollRightBtn = document.querySelector('.scroll-btn-right');
+            const cardsContainer = document.querySelector('.cards-c');
+            scrollLeftBtn.addEventListener('click', () => {
+                cardsContainer.scrollBy({
+                    left: -320, // Adjust the scroll amount as needed
+                    behavior: 'smooth'
+                });
             });
-            
-            // Permitir búsqueda con Enter
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' && searchInput.value.trim() !== '') {
-                    // Aquí puedes agregar la lógica de búsqueda
-                    alert('Buscando: ' + searchInput.value);
-                }
+            scrollRightBtn.addEventListener('click', () => {
+                cardsContainer.scrollBy({
+                    left: 320, // Adjust the scroll amount as needed
+                    behavior: 'smooth'
+                });
             });
         });
