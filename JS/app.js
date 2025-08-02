@@ -140,6 +140,7 @@ const categoryList = document.querySelector('.category-list');
 if (categoryList) {
     // Category filtering functionality
     const categoryButtons = categoryList.querySelectorAll('button');
+    const categoryCards = document.querySelectorAll('.card-c-1, .card-c-2, .card-c-3, .card-c-4');
     
     categoryButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -150,6 +151,25 @@ if (categoryList) {
             
             // Add 'selected-c' class to the clicked button
             this.classList.add('selected-c');
+            
+            // Get the category to filter by
+            const filterCategory = this.getAttribute('data-category');
+            
+            // Show/hide cards based on category
+            categoryCards.forEach(card => {
+                if (filterCategory === 'Todas') {
+                    card.style.display = 'block';
+                } else {
+                    const cardCategories = card.getAttribute('data-category');
+                    // Split the categories by comma and check if the filter category is included
+                    const categoriesArray = cardCategories.split(',').map(cat => cat.trim());
+                    if (categoriesArray.includes(filterCategory)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
         });
     });
     

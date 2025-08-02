@@ -171,15 +171,15 @@
             <section class="Category">
                 <h2 class="tilte-category">Explora Por Categorías</h2>
                 <ul class="category-list">
-                    <li><button class="selected-c">Todas</button></li>
-                    <li><button>Rapido</button></li>
-                    <li><button>Desayunos</button></li>
-                    <li><button>Almuerzos</button></li>
-                    <li><button>Ensaladas</button></li>
-                    <li><button>Pastas</button></li>
-                    <li><button>Carnes</button></li>
-                    <li><button>Postres</button></li>
-                    <li><button>Vegetariano</button></li>
+                    <li><button class="selected-c" data-category="Todas">Todas</button></li>
+                    <li><button data-category="Rapido">Rapido</button></li>
+                    <li><button data-category="Desayunos">Desayunos</button></li>
+                    <li><button data-category="Almuerzos">Almuerzos</button></li>
+                    <li><button data-category="Ensaladas">Ensaladas</button></li>
+                    <li><button data-category="Pastas">Pastas</button></li>
+                    <li><button data-category="Carnes">Carnes</button></li>
+                    <li><button data-category="Postres">Postres</button></li>
+                    <li><button data-category="Vegetariano">Vegetariano</button></li>
                 </ul>
                 <div class="section-container" id="Categorias">
                     <button class="scroll-btn scroll-btn-left" aria-label="Scroll left">
@@ -188,7 +188,7 @@
                         </svg>
                     </button>
                     <div class="cards-c">
-                        <div class="card-c-1">
+                        <div class="card-c-1" data-category="Rapido, Vegetariano">
                             <img src="/img/Curry.png" alt="">
                             <h3>Curry Tailandés</h3>
                             <div class="t-p">
@@ -196,7 +196,7 @@
                                 <p>4 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-2">
+                        <div class="card-c-2" data-category="Desayunos, Rapido">
                             <img src="/img/Panqueques.png" alt="">
                             <h3>Panqueques Especiales</h3>
                             <div class="t-p">
@@ -204,7 +204,7 @@
                                 <p>2 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-3">
+                        <div class="card-c-3" data-category="Carnes, Almuerzos">
                             <img src="/img/Tacos-Pastor.png" alt="">
                             <h3>Tacos al Pastor</h3>
                             <div class="t-p">
@@ -212,7 +212,7 @@
                                 <p>9 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-4">
+                        <div class="card-c-4" data-category="Vegetariano, Rapido">
                             <img src="/img/Sopa-Clabaza.png" alt="">
                             <h3>Sopa de Calabaza</h3>
                             <div class="t-p">
@@ -220,36 +220,52 @@
                                 <p>9 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-1">
-                            <img src="/img/Curry.png" alt="">
-                            <h3>Curry Tailandés</h3>
+                        <div class="card-c-4" data-category="Vegetariano, Ensaladas">
+                            <img src="/img/Sushi-Variado.png" alt="">
+                            <h3>Sushi Variado</h3>
                             <div class="t-p">
-                                <p>30 min</p>
+                                <p>45 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Pastas, Carnes">
+                            <img src="/img/Lasagna-Tradicional.png" alt="">
+                            <h3>Lasagna Tradicional</h3>
+                            <div class="t-p">
+                                <p>90 min</p>
+                                <p>6 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Pastas, Vegetariano">
+                            <img src="/img/Risotto-Champiñones.png" alt="">
+                            <h3>Risotto de Champiñones</h3>
+                            <div class="t-p">
+                                <p>35 min</p>
                                 <p>4 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-2">
-                            <img src="/img/Panqueques.png" alt="">
-                            <h3>Panqueques Especiales</h3>
+                        <div class="card-c-4" data-category="Postres, Rapido">
+                            <img src="/img/Tiramisú-Clasico.png" alt="">
+                            <h3>Tiramisú Clasico</h3>
+                            <div class="t-p">
+                                <p>30 min</p>
+                                <p>6 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Carnes, Rapido">
+                            <img src="/img/Pollo-Curry.png" alt="">
+                            <h3>Pollo al Curry</h3>
+                            <div class="t-p">
+                                <p>50 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Carnes, Rapido">
+                            <img src="/img/Hamburguesa-Gourmet.png" alt="">
+                            <h3>Hamburguesa Gourmet</h3>
                             <div class="t-p">
                                 <p>25 min</p>
                                 <p>2 Porciones</p>
-                            </div>
-                        </div>
-                        <div class="card-c-3">
-                            <img src="/img/Tacos-Pastor.png" alt="">
-                            <h3>Tacos al Pastor</h3>
-                            <div class="t-p">
-                                <p>45 min</p>
-                                <p>9 Porciones</p>
-                            </div>
-                        </div>
-                        <div class="card-c-4">
-                            <img src="/img/Sopa-Clabaza.png" alt="">
-                            <h3>Sopa de Calabaza</h3>
-                            <div class="t-p">
-                                <p>45 min</p>
-                                <p>9 Porciones</p>
                             </div>
                         </div>
                     </div>
