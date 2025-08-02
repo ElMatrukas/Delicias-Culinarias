@@ -56,6 +56,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 0 50px; /* Add padding to accommodate buttons */
+    padding-block-end: 1vh;
     position: relative;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -70,7 +71,7 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    z-index: 20;
+    z-index: 9;
     display: flex;
     align-items: center;
     justify-content: center;

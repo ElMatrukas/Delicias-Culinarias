@@ -60,22 +60,77 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Buscando: ' + searchInput.value);
         }
     });
-  })
+    })
 
-document.addEventListener('DOMContentLoaded', function() {
-            const scrollLeftBtn = document.querySelector('.scroll-btn-left');
-            const scrollRightBtn = document.querySelector('.scroll-btn-right');
-            const cardsContainer = document.querySelector('.cards-c');
-            scrollLeftBtn.addEventListener('click', () => {
-                cardsContainer.scrollBy({
-                    left: -320, // Adjust the scroll amount as needed
-                    behavior: 'smooth'
-                });
-            });
-            scrollRightBtn.addEventListener('click', () => {
-                cardsContainer.scrollBy({
-                    left: 320, // Adjust the scroll amount as needed
-                    behavior: 'smooth'
-                });
+// Scroll functionality for all sections
+// Popular section
+const popularSection = document.querySelector('.Popular');
+if (popularSection) {
+    const popularLeftBtn = popularSection.querySelector('.scroll-btn-left');
+    const popularRightBtn = popularSection.querySelector('.scroll-btn-right');
+    const popularContainer = popularSection.querySelector('.cards-p');
+    
+    if (popularLeftBtn && popularRightBtn && popularContainer) {
+        popularLeftBtn.addEventListener('click', () => {
+            popularContainer.scrollBy({
+                left: -320,
+                behavior: 'smooth'
             });
         });
+        
+        popularRightBtn.addEventListener('click', () => {
+            popularContainer.scrollBy({
+                left: 320,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// New section
+const newSection = document.querySelector('.New');
+if (newSection) {
+    const newLeftBtn = newSection.querySelector('.scroll-btn-left');
+    const newRightBtn = newSection.querySelector('.scroll-btn-right');
+    const newContainer = newSection.querySelector('.cards-n');
+    
+    if (newLeftBtn && newRightBtn && newContainer) {
+        newLeftBtn.addEventListener('click', () => {
+            newContainer.scrollBy({
+                left: -320,
+                behavior: 'smooth'
+            });
+        });
+        
+        newRightBtn.addEventListener('click', () => {
+            newContainer.scrollBy({
+                left: 320,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Category section
+const categorySection = document.querySelector('.Category');
+if (categorySection) {
+    const categoryLeftBtn = categorySection.querySelector('.scroll-btn-left');
+    const categoryRightBtn = categorySection.querySelector('.scroll-btn-right');
+    const categoryContainer = categorySection.querySelector('.cards-c');
+    
+    if (categoryLeftBtn && categoryRightBtn && categoryContainer) {
+        categoryLeftBtn.addEventListener('click', () => {
+            categoryContainer.scrollBy({
+                left: -320,
+                behavior: 'smooth'
+            });
+        });
+        
+        categoryRightBtn.addEventListener('click', () => {
+            categoryContainer.scrollBy({
+                left: 320,
+                behavior: 'smooth'
+            });
+        });
+    } 
+}
