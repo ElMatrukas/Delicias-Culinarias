@@ -91,13 +91,11 @@
     gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    /* Removed horizontal padding to fix overflow */
-    padding: 0;
-    padding-block-end: 1vh;
+    
     position: relative;
     box-sizing: border-box;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 .scroll-btn {
     position: absolute;
