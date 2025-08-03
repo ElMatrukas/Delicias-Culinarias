@@ -45,11 +45,10 @@
     gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 0 50px; /* Add padding to accommodate buttons */
-    padding-block-end: 1vh;
+    
     position: relative;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 .scroll-btn {
     position: absolute;

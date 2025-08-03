@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicias Culinarias</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/herosection.css">
-    <link rel="stylesheet" href="/styles/popular.css">
-    <link rel="stylesheet" href="/styles/nuevo.css">
-    <link rel="stylesheet" href="/styles/Category.css">
-    <script defer src="/JS/app.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/herosection.css">
+    <link rel="stylesheet" href="styles/popular.css">
+    <link rel="stylesheet" href="styles/nuevo.css">
+    <link rel="stylesheet" href="styles/Category.css">
+    <link rel="stylesheet" href="styles/Newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script defer src="JS/app.js"></script>
 </head>
 <body>
     <header class="topheader">
@@ -171,15 +173,15 @@
             <section class="Category">
                 <h2 class="tilte-category">Explora Por Categorías</h2>
                 <ul class="category-list">
-                    <li class="selected">Todas</li>
-                    <li class="">Rapido</li>
-                    <li class="">Desayunos</li>
-                    <li class="">Almuerzos</li>
-                    <li class="">Ensaladas</li>
-                    <li class="">Pastas</li>
-                    <li class="">Carnes</li>
-                    <li class="">Postres</li>
-                    <li class="">Vegetariano</li>
+                    <li><button class="selected-c" data-category="Todas">Todas</button></li>
+                    <li><button data-category="Rapido">Rapido</button></li>
+                    <li><button data-category="Desayunos">Desayunos</button></li>
+                    <li><button data-category="Almuerzos">Almuerzos</button></li>
+                    <li><button data-category="Ensaladas">Ensaladas</button></li>
+                    <li><button data-category="Pastas">Pastas</button></li>
+                    <li><button data-category="Carnes">Carnes</button></li>
+                    <li><button data-category="Postres">Postres</button></li>
+                    <li><button data-category="Vegetariano">Vegetariano</button></li>
                 </ul>
                 <div class="section-container" id="Categorias">
                     <button class="scroll-btn scroll-btn-left" aria-label="Scroll left">
@@ -188,7 +190,7 @@
                         </svg>
                     </button>
                     <div class="cards-c">
-                        <div class="card-c-1">
+                        <div class="card-c-1" data-category="Rapido, Almuerzos">
                             <img src="/img/Curry.png" alt="">
                             <h3>Curry Tailandés</h3>
                             <div class="t-p">
@@ -196,39 +198,31 @@
                                 <p>4 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-2">
-                            <img src="/img/Panqueques.png" alt="">
-                            <h3>Panqueques Especiales</h3>
-                            <div class="t-p">
-                                <p>25 min</p>
-                                <p>2 Porciones</p>
-                            </div>
-                        </div>
-                        <div class="card-c-3">
-                            <img src="/img/Tacos-Pastor.png" alt="">
-                            <h3>Tacos al Pastor</h3>
-                            <div class="t-p">
-                                <p>45 min</p>
-                                <p>9 Porciones</p>
-                            </div>
-                        </div>
-                        <div class="card-c-4">
-                            <img src="/img/Sopa-Clabaza.png" alt="">
-                            <h3>Sopa de Calabaza</h3>
-                            <div class="t-p">
-                                <p>45 min</p>
-                                <p>9 Porciones</p>
-                            </div>
-                        </div>
-                        <div class="card-c-1">
-                            <img src="/img/Curry.png" alt="">
-                            <h3>Curry Tailandés</h3>
+                        <div class="card-c-1" data-category="Rapido, Pastas, Almuerzos">
+                            <img src="/img/Pasta-Carbonara.png" alt="">
+                            <h3>Pasta Carbonara Clasica</h3>
                             <div class="t-p">
                                 <p>30 min</p>
                                 <p>4 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-2">
+                        <div class="card-c-1" data-category="Rapido, Ensaladas">
+                            <img src="/img/Ensalada-Cesar-Pollo.png" alt="">
+                            <h3>Ensalada Cesar con Pollo</h3>
+                            <div class="t-p">
+                                <p>25 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-1" data-category="Postres">
+                            <img src="/img/Brownies.png" alt="">
+                            <h3>Brownies de Chocolate</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>9 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-2" data-category="Desayunos, Rapido">
                             <img src="/img/Panqueques.png" alt="">
                             <h3>Panqueques Especiales</h3>
                             <div class="t-p">
@@ -236,7 +230,7 @@
                                 <p>2 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-3">
+                        <div class="card-c-3" data-category="Carnes, Almuerzos">
                             <img src="/img/Tacos-Pastor.png" alt="">
                             <h3>Tacos al Pastor</h3>
                             <div class="t-p">
@@ -244,12 +238,60 @@
                                 <p>9 Porciones</p>
                             </div>
                         </div>
-                        <div class="card-c-4">
+                        <div class="card-c-4" data-category="Vegetariano, Almuerzos">
                             <img src="/img/Sopa-Clabaza.png" alt="">
                             <h3>Sopa de Calabaza</h3>
                             <div class="t-p">
                                 <p>45 min</p>
                                 <p>9 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Vegetariano">
+                            <img src="/img/Sushi-Variado.png" alt="">
+                            <h3>Sushi Variado</h3>
+                            <div class="t-p">
+                                <p>45 min</p>
+                                <p>2 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Pastas, Carnes, Almuerzos">
+                            <img src="/img/Lasagna-Tradicional.png" alt="">
+                            <h3>Lasagna Tradicional</h3>
+                            <div class="t-p">
+                                <p>90 min</p>
+                                <p>6 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Pastas, Vegetariano, Almuerzos">
+                            <img src="/img/Risotto-Champiñones.png" alt="">
+                            <h3>Risotto de Champiñones</h3>
+                            <div class="t-p">
+                                <p>35 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Postres, Rapido">
+                            <img src="/img/Tiramisú-Clasico.png" alt="">
+                            <h3>Tiramisú Clasico</h3>
+                            <div class="t-p">
+                                <p>30 min</p>
+                                <p>6 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Carnes, Almuerzos">
+                            <img src="/img/Pollo-Curry.png" alt="">
+                            <h3>Pollo al Curry</h3>
+                            <div class="t-p">
+                                <p>50 min</p>
+                                <p>4 Porciones</p>
+                            </div>
+                        </div>
+                        <div class="card-c-4" data-category="Carnes, Rapido, Almuerzos">
+                            <img src="/img/Hamburguesa-Gourmet.png" alt="">
+                            <h3>Hamburguesa Gourmet</h3>
+                            <div class="t-p">
+                                <p>25 min</p>
+                                <p>2 Porciones</p>
                             </div>
                         </div>
                     </div>
@@ -260,7 +302,44 @@
                     </button>
                 </div>
             </section>
+            <section class="Newsletter">
+                <div class="content-newsletter">
+                    <h2 class="tiltet-newsletter">Suscríbete a Nuestro Newsletter</h2>
+                    <p class="sub-newsletter">Recibe las mejores recetas directo a tu correo cada semana</p>
+                    <form action="">
+                        <input type="email" name="email" id="email" placeholder="Tu correo electronico">
+                        <input type="submit" id="submit" value="Suscríbirse">
+                    </form>
+                </div>
+            </section>
         </main>
-    <footer></footer>
+    <footer>
+        <ul class="content-footer">
+            <li><h3>Delicias Culinarias</h3>
+            <p>Compartiendo el amor por la cocina desde 2020.</p></li>
+            <li><h3>Navegacion</h3>
+                <ul class="nav-footer">
+                    <li><a href="#herosection">Inicio</a></li>
+                    <li><a href="#Popular">Popular</a></li>
+                    <li><a href="#Categorias">Categorías</a></li>
+                    <li><a href="#Contacto">Contacto</a></li>
+                </ul></li>
+            <li><h3>Legal</h3>
+                <ul class="terminos">
+                    <li>Terminos y Condiciones</li>
+                    <li>Politica de Privacidad</li>
+                    <li>Cookies</li>
+                </ul></li>
+            <li><h3>Contacto</h3>
+                <ul class="contacto">
+                    <li>info@deliciasculinarias.com</li>
+                    <li>+54 9 11 123 456 789</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="copy">
+            <p>© 2023 Delicias Culinarias. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
